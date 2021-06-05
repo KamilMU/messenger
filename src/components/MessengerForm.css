@@ -1,0 +1,26 @@
+.container {
+  border: 2px solid black;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+input {
+  padding: 10px;
+  margin-right: 10px;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid black;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 2px;
+  background-color: white;
+  outline: none;
+  padding: 10px;
+  max-width: 150px;
+}

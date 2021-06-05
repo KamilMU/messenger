@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.menu {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.menu:hover {
+  color: orange;
+}
+
+.header input {
+  max-width: 86px;
+  width: 100%;
+  padding: 3px;
+}
