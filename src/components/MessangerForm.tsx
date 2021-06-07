@@ -2,27 +2,21 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addMessage } from '../redux/actions/index';
 import { store } from '../main';
+import { Room } from '../types';
 const styles = require('./MessengerForm.css').default;
 
 interface Props {
-  id?: number;
+  roomId?: number;
   inputText: string;
   // setInputText: React.Dispatch<React.SetStateAction<string>>;
   changeInputText: (text: string) => void;
-  // addMessage: () => void;
 }
 
-// interface RootState {
-//   messages: {
-//     id: number;
-//     text: string;
-//   }[]
-// }
 type AppDispatch = typeof store.dispatch
 
-const MessangerForm: React.FC<Props> = ({ id, inputText, changeInputText }) => {
-  // const messages = useSelector((state: RootState) => state.messages)
+const MessangerForm: React.FC<Props> = ({ inputText, changeInputText, roomId }) => {
   const dispatch = useDispatch<AppDispatch>();
+  console.log(roomId, 'roomId')
 
   return (
     <form
@@ -30,8 +24,8 @@ const MessangerForm: React.FC<Props> = ({ id, inputText, changeInputText }) => {
       onSubmit={
         (e: React.FormEvent<HTMLFormElement>) => {
           e.preventDefault();
-          if (inputText) {
-            dispatch(addMessage(inputText));
+          if (inputText && roomId) {
+            dispatch(addMessage(inputText, roomId));
           }
           changeInputText('');
         }

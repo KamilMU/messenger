@@ -1,5 +1,7 @@
 .container {
-  border: 2px solid black;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
   padding: 20px;
   text-align: center;
   display: flex;
@@ -12,15 +14,29 @@ input {
   margin-right: 10px;
   width: 100%;
   font-family: 'Roboto', sans-serif;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
-button {
+.container button {
   cursor: pointer;
-  border: 1px solid black;
+  outline: none;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
   font-family: 'Roboto', sans-serif;
   border-radius: 2px;
-  background-color: white;
+  border: none;
+  background-color: #69a0d9;
   outline: none;
   padding: 10px;
   max-width: 150px;
+}
+
+.container button:hover {
+  color: white;
 }

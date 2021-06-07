@@ -3,22 +3,27 @@
   flex-direction: column;
   height: 220px;
   margin-right: 10px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .rooms a {
-  border: 1px solid black;
+  border-bottom: 1px solid rgb(224, 224, 224);
   padding: 11px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 13px;
+  width: 100%;
   color: rgb(51, 51, 51);
 }
 
-.user {
-  font-weight: bold;
+.rooms img {
+  border-radius: 50%;
+  max-width: 30%;
 }
 
 .rooms a:hover,
 .rooms a:active {
-  color: orange
+  color: #69a0d9
 }
