@@ -1,29 +1,17 @@
 .rooms {
   display: flex;
   flex-direction: column;
-  height: 220px;
   margin-right: 10px;
   overflow-y: auto;
 }
 
-.rooms a {
-  border-bottom: 1px solid rgb(224, 224, 224);
-  padding: 11px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 13px;
-  width: 100%;
-  color: rgb(51, 51, 51);
-}
-
 .rooms img {
   border-radius: 50%;
-  max-width: 30%;
+  max-width: 34%;
 }
 
-.rooms a:hover,
-.rooms a:active {
-  color: #69a0d9
+.rooms img:hover {
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 }

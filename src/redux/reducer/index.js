@@ -4,7 +4,7 @@ const initialState = {
   rooms: [
     {
       id: 1,
-      userName: 'Dave',
+      userName: 'Zac',
       url: 'https://prvera.ru/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png',
       messages: [
         {

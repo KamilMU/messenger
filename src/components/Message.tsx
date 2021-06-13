@@ -10,7 +10,7 @@ const Message: React.FC<Props> = ({ message }) => {
   return (
     <div key={message.id}
       className={styles.text}
-      style={message.userId === 1 ? { marginLeft: 'auto' } : { marginRight: 'auto' }}>
+      style={message.userId === 1 ? { marginLeft: 'auto' } : { marginRight: 'auto', backgroundColor: '#90BDFF' }}>
       {message && message.text}
     </div>
   )

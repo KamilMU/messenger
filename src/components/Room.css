@@ -1,6 +1,6 @@
 .room {
   width: 100%;
-  height: 300px;
+  height: 500px;
   padding: 12px;
   display: flex;
   flex-direction: column;
@@ -34,9 +34,10 @@
   font-weight: 600;
   text-decoration: none;
   color: black;
+  border-bottom: none;
 }
 
 .currentUser a img {
-  max-width: 8%;
+  max-width: 9%;
   border-radius: 50%;
 }

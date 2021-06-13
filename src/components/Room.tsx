@@ -9,13 +9,16 @@ const styles = require('./Room.css').default;
 
 const Room: React.FC<RouteComponentProps<{}, {}, { currentRoom: Room }>> = ({ location }) => {
   const [inputText, setInputText] = React.useState('');
-  const rooms = useSelector((state: RootState) => state.rooms)
+  const rooms = useSelector(
+    (state: RootState) => state.rooms
+  )
+  const room = useSelector(
+    (state: RootState) => state.rooms.find(room => room.id === location.state?.currentRoom.id)
+  )
 
   const changeInputText = (text: string): void => {
     setInputText(text)
   }
-
-  console.log(rooms, 'rooms')
 
   return (
     <main>
@@ -27,7 +30,7 @@ const Room: React.FC<RouteComponentProps<{}, {}, { currentRoom: Room }>> = ({ lo
       </div>
       <div className={styles.room}>
         <div className={styles.messages}>
-          {location.state ? location.state.currentRoom.messages.map((message) => (
+          {room ? room.messages.map((message) => (
             <Message key={message.id} message={message} />
           )) : rooms[0].messages.map(mes => (
             <Message key={mes.id} message={mes} />
@@ -36,7 +39,7 @@ const Room: React.FC<RouteComponentProps<{}, {}, { currentRoom: Room }>> = ({ lo
 
         <div>
           <MessangerForm
-            roomId={location.state?.currentRoom.id}
+            roomId={location.state ? location.state.currentRoom.id : 1}
             inputText={inputText}
             changeInputText={changeInputText}
           />

@@ -1,22 +1,29 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Room } from '../types';
-const styles = require('./Rooms.css').default;
+const styles = require('./RoomShelf.css').default;
 
 interface Props {
-  room : Room
+  room: Room
 }
 const RoomShelf: React.FC<Props> = ({ room }) => {
+  const [clicked, setClicked] = React.useState(false)
+  console.log(room)
+
   return (
-    <Link to={{
-      pathname: `/${room && room.id}`,
-      state: {
-        currentRoom: room && room
-      }
-    }}>
+    <NavLink
+      activeClassName={clicked ? styles.active : ''}
+      className={styles.shelf}
+      onClick={() => setClicked(true)}
+      to={{
+        pathname: `/${room && room.id}`,
+        state: {
+          currentRoom: room && room
+        }
+      }}>
       <div className={styles.user}>{room && room.userName}</div>
       <img src={room && room.url}></img>
-    </Link>
+    </NavLink>
   )
 }
 
